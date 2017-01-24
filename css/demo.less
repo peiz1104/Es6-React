@@ -1,0 +1,142 @@
+@color:#7272b2;
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.hlh(@h){
+	height:@h;
+	line-height: @h;
+}
+.abs(@t,@l){
+	position:absolute;
+	top:@t;
+	left:@l
+}
+body{
+	background:pink;
+}
+.header {
+	.hlh(50px);
+	color: #fff;
+	background: @color;
+	.arrow {
+		float: left;
+		position: relative;
+		span {
+			.abs(10px, 0px);
+			border: 16px solid transparent;
+			border-right: 16px solid #fff;
+		}
+		.blue {
+			border-right-color: @color;
+			left: 4px;
+		}
+	}
+	.login {
+		float: right;
+		margin-right: 10px;
+	}
+	h1 {
+		font-size: 30px;
+		text-align: center;
+		text-indent: 30px;
+	}
+}
+.home {
+	li {
+		padding: 10px;
+		border-bottom: 1px solid #ccc;
+		overflow: hidden;
+		img {
+			width: 28%;
+			float: left;
+		}
+		.intro {
+			margin-left: 28%;
+			padding-left: 10px; 
+			h2 {
+				font-size: 16px;
+				margin-bottom: 10px;
+			}
+			p {
+				font-size: 14px;
+				line-height: 20px;
+				.comment-num {
+					float: right;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+}
+.detail{
+	text-align: center;
+	h1 {
+		.hlh(50px);
+		font-size: 20px;
+	}
+	p {
+		font-size: 14px;
+		color: #333;
+		line-height: 30px;
+		text-align: left;
+		margin: 0 20px;
+	}
+	.comment-num {
+		float: right;
+	}
+	img {
+		margin-bottom: 20px;
+		width: 100%;
+	}
+	.btn {
+		.hlh(40px);
+		background: @color;
+		color: #fff;
+		margin: 40px 20px;
+		border-radius: 5px;
+		text-align: center;
+	}
+}
+.comments{
+	.container{
+		textarea{
+			width:100%;
+			box-sizing:border-box;
+			height:40px;
+			padding:5px 0 5px 10px;
+		}
+		div.submit{
+			float:right;
+			width:60px;
+			height:30px;
+			text-align: center;
+			color:#fff;
+			background: @color;
+			line-height: 30px;
+			border-radius: 5px;
+			font-size: 14px;
+			font-weight: bold;
+			margin:20px 10px 0 0;
+		}
+		ul{
+			margin-top:20px;
+			width:100%;
+			box-sizing: border-box;
+			padding:20px 10px 0 10px;
+			li{
+				line-height:24px;
+				font-size:14px;
+				h3{
+					color:@color;
+					font-family: 'Microsoft Yahei';
+					padding-top:20px;
+				}
+				span{
+                    color:#f50;
+				}
+			}
+		}
+	}
+}
